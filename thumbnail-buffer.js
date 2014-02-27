@@ -15,16 +15,16 @@ var util	= require('util'),
  * Pre-process.
  * 
  * Parameters: 
- *  image - (String/Readable Stream/Buffer) image file path, image stream or
+ *  image: (String/Readable Stream/Buffer) image file path, image stream or
  *          buffer
- *  options - (Object) thumbnail options 
- *    width - (Number) thumbnail width
- *    height - (Number) thumbnail height
- *    crop - (String) crop method, 'Center' or 'North'
+ *  options: (Object) thumbnail options 
+ *    width: (Number) thumbnail width
+ *    height: (Number) thumbnail height
+ *    crop: (String) crop method, 'Center' or 'North'
  * 
  * Callback: 
- *  callback - (Function) function(err) {} 
- *    err - (Object) error object, set to null if succeed
+ *  callback: (Function) function(err) {} 
+ *    err: (Object) error object, set to null if succeed
  */
 function preProcess(image, options, callback) {
 	callback(null);
@@ -51,17 +51,17 @@ function preProcess(image, options, callback) {
  * Create image thumbnail buffer.
  *
  * Parameters: 
- *	image - (String/Readable Stream/Buffer) image file path, image stream or
+ *	image: (String/Readable Stream/Buffer) image file path, image stream or
  *					buffer
- *	options - (Object) thumbnail options 
- *		width - (Number) thumbnail width
- *		height - (Number) thumbnail height
- *		crop - (String) crop method, 'Center' or 'North'
+ *	options: (Object) thumbnail options 
+ *		width: (Number) thumbnail width
+ *		height: (Number) thumbnail height
+ *		crop: (String) crop method, 'Center' or 'North'
  * 
  * Callback: 
- *	callback - (Function) function(err, buf) {} 
- *		err - (Object) error object, set to null if succeed
- *		buf - (Buffer) thumbnail buffer
+ *	callback: (Function) function(err, buf) {} 
+ *		err: (Object) error object, set to null if succeed
+ *		buf: (Buffer) thumbnail buffer
  */
 function process(image, options, callback) {
 	if (options.crop) {
@@ -81,13 +81,13 @@ function process(image, options, callback) {
  * Post process.
  *
  * Parameters:
- *	buf - (Buffer) thumbnail buffer
+ *	buf: (Buffer) thumbnail buffer
  * 
  * Callback:
- *	callback - (Function) function(err, buf, info) {}
- *		err - (Object) error object, set to null if succeed.
- *		info - (Object) thumbnail info
- *			format - (String) thumbnail format
+ *	callback: (Function) function(err, buf, info) {}
+ *		err: (Object) error object, set to null if succeed.
+ *		info: (Object) thumbnail info
+ *			format: (String) thumbnail format
  */
 function postProcess(buf, callback) {
 	var info = {};
@@ -107,19 +107,19 @@ function postProcess(buf, callback) {
  * Create image thumbnail.
  *
  * Parameters: 
- *  image - (String/Readable Stream/Buffer) image file path, image stream or
+ *  image: (String/Readable Stream/Buffer) image file path, image stream or
  *          buffer
- *  options - (Object) thumbnail options 
- *    width - (Number) thumbnail width
- *    height - (Number) thumbnail height
- *    crop - (String) crop method, 'Center' or 'North'
+ *  options: (Object) thumbnail options 
+ *    width: (Number) thumbnail width
+ *    height: (Number) thumbnail height
+ *    crop: (String) crop method, 'Center' or 'North'
  * 
  * Callback:
- *  callback - (Function) function(e, buf, info) {}
- *    err - (Object) error object, set to null if succeed.
- *    buf - (Buffer) thumbnail buffer
- *    info - (Object) thumbnail object
- *      format - (String) thumbnail format
+ *  callback: (Function) function(err, buf, info) {}
+ *    err: (Object) error object, set to null if succeed.
+ *    buf: (Buffer) thumbnail buffer
+ *    info: (Object) thumbnail object
+ *      format: (String) thumbnail format
  */
 function create(image, options, callback) {
 	preProcess(image, options, function(err) {
