@@ -1,6 +1,6 @@
 var fs = require('fs');
 var gm = require('gm');
-var tb = require('../thumb-buffer.js');
+var tb = require('../thumbnail-buffer.js');
 
 var imagePath = __dirname + '/sunflower.jpg';
 var thumbPath = __dirname + '/thumb.jpg';
