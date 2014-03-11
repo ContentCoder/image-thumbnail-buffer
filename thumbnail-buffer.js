@@ -8,6 +8,8 @@
  * update date: 2014-2-14
  */
 
+exports.create = create;
+
 var util	= require('util'), 
 		gm		= require('gm');
 
@@ -146,5 +148,4 @@ function create(image, options, callback) {
 	});		// preProcess
 }
 
-exports.create = create;
 
