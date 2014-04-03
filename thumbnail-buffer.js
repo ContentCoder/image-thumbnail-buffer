@@ -1,17 +1,13 @@
 /* 
  * thumbnail-buffer.js
  * 
- * Image thumbnail buffer.
- * 
- * version: 0.0.1
- * create date: 2014-2-14
- * update date: 2014-2-14
+ * Image thumbnail buffer module.
  */
 
 exports.create = create;
 
-var util	= require('util'), 
-		gm		= require('gm');
+var util = require('util'), 
+    gm   = require('gm');
 
 /* 
  * Pre-process.
